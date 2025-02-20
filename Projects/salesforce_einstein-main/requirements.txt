@@ -1,0 +1,11 @@
+numpy<2.0.0
+pandas
+matplotlib
+torch
+torchmetrics
+scikit-learn
+jupyter
+seaborn
+scipy
+mlflow
+argparse

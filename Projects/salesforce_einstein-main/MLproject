@@ -1,0 +1,54 @@
+name: SALESFORCE_EINSTEIN
+
+entry_points:
+  main:
+    parameters:
+      run_name: {type: str} 
+      num_channels: {type: int, default: 64}
+      kernel_size: {type: int, default: 2}
+      dropout: {type: float, default: 0.2}
+      learning_rate: {type: float, default: 0.1}
+      num_epochs: {type: int, default: 100}
+      model_path: {type: str, default: 'models/Test_run_6_model.pth'}
+      data_path: {type: str, default: 'Dataset/engineered_superstore_orders.csv'}
+    command: > 
+        python TCN/main.py --run_name {run_name} \
+                            --num_channels {num_channels} \
+                            --kernel_size {kernel_size} \
+                            --dropout {dropout} \
+                            --learning_rate {learning_rate} \
+                            --num_epochs {num_epochs} \
+                            --model_path {model_path} \
+
+  # train:
+  #   parameters:
+  #     run_name: {type: str} 
+  #     experiment_name: {type: str, default: default}
+  #     num_channels: {type: int, default: 64}
+  #     kernel_size: {type: int, default: 2}
+  #     dropout: {type: float, default: 0.2}
+  #     learning_rate: {type: float, default: 0.1}
+  #     num_epochs: {type: int, default: 100}
+  #   command: > 
+  #       python TCN/train.py --run_name {run_name} \
+  #                         --num_channels {num_channels} \
+  #                         --kernel_size {kernel_size} \
+  #                         --dropout {dropout} \
+  #                         --learning_rate {learning_rate} \
+  #                         --num_epochs {num_epochs}
+
+  # evaluate:
+  #   parameters:
+  #     run_name: {type: str, default: 'Test_Run_6'}
+  #     model_path: {type: str, default: 'models/Test_run_6_model.pth'}
+  #     data_path: {type: str, default: 'Dataset/engineered_superstore_orders.csv'}
+  #     num_channels: {type: int, default: 64}
+  #     kernel_size: {type: int, default: 2}
+  #     dropout: {type: int, default: 0.2}
+  #   command: > 
+  #       python TCN/evaluate.py --run_name {run_name} \
+  #                            --model_path {model_path} \
+  #                            --data_path {data_path} \
+  #                            --num_channels {num_channels} \
+  #                            --kernel_size {kernel_size} \
+  #                            --dropout {dropout}
