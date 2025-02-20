@@ -1,0 +1,12 @@
+torch
+torchvision
+gym
+matplotlib
+wandb
+tqdm
+scikit-learn
+scikit-fuzzy
+seaborn
+numpy
+pandas
+scipy
