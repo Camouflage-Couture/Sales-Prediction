@@ -1,0 +1,11 @@
+ca-certificates
+cmake
+libomp
+lit
+mpdecimal
+openssl@3
+pkg-config
+python@3.12
+readline
+sqlite
+xz
